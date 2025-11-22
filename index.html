@@ -1,282 +1,255 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Yuan-Pin Huang, RTL-level designer and Micro-controller engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Yuan-Pin Huang</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #fff;
+        }
 
-	<!-- favicon -->
-	<link href="favicon.png" rel=icon>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            font-size: 11pt;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
 
-	<!-- web-fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0;
+        }
 
-	<!-- font-awesome -->
-	<link href="css/font-awesome.min.css" rel="stylesheet">
+        a { color: var(--accent-color); text-decoration: none; }
+        
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
 
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
 
-	<!-- Style CSS -->
-	<link href="css/style.css" rel="stylesheet">
+        .job-title-main {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 600;
+            margin: 3px 0;
+        }
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+        .contact-info { font-size: 0.9em; color: #555; margin-top: 3px; }
+        .contact-info span { margin: 0 3px; }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 2px;
+            margin-top: 12px;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+
+        p { margin: 0 0 5px 0; text-align: justify; }
+
+        .job-entry {
+            margin-bottom: 12px;
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .company-name { font-weight: bold; font-size: 1.05em; color: #000; }
+        .location { font-style: italic; color: #666; font-size: 0.9em; }
+
+        .role-block {
+            padding-left: 12px;
+            border-left: 2px solid #e0e0e0;
+            margin-bottom: 4px;
+        }
+
+        .role-block + .role-block {
+            margin-top: 8px;
+        }
+
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .role-title { font-weight: 700; color: var(--primary-color); font-size: 0.95em; }
+        .role-date { font-family: 'Segoe UI', sans-serif; color: #666; font-size: 0.85em; }
+
+        ul {
+            margin-top: 2px;
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 2px;
+            font-size: 0.95em;
+        }
+
+        .skills-list li { margin-bottom: 1px; }
+
+        .education-entry { margin-bottom: 6px; }
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 0.95em;
+            color: #000;
+        }
+        .education-degree {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95em;
+            margin-top: 0px;
+        }
+
+        @media print {
+            @page {
+                margin: 0.5cm 1cm;
+                size: A4;
+            }
+            body { background-color: #fff; -webkit-print-color-adjust: exact; }
+            .resume-container { width: 100%; padding: 0; margin: 0; }
+        }
+    </style>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar">
-<div id="main-wrapper">
-<!-- Page Preloader -->
-<div id="preloader">
-	<div id="status">
-		<div class="status-mes"></div>
-	</div>
-</div>
+<body>
 
-<div class="columns-block container">
-<div class="left-col-block blocks">
-	<header class="header theiaStickySidebar">
-		<div class="profile-img">
-			<img src="img/img-profile.jpg" class="img-responsive" alt=""/>
-		</div>
-		<div class="content">
-			<h1>Yuan-Pin Huang</h1>
-			<span class="lead">RTL-level Designer</span>
+    <div class="resume-container">
+        <header>
+            <h1>Yuan-Pin Huang</h1> 
+            <div class="job-title-main">Senior Digital Engineer</div>
+            <div class="contact-info">
+                <span>HsinChu City, Taiwan</span> |
+                <span><a href="mailto:ryan6309@gmail.com">ryan6309@gmail.com</a></span> |
+                <span>+886-988-265-583</span> |
+                <span><a href="https://www.linkedin.com/in/arashinoon/" target="_blank">linkedin.com/in/arashinoon</a></span>
+            </div>
+        </header>
 
-			<div class="about-text">
-				<h4>
-					Experience in RTL-level design.<br>
-					Development FPGA/CPLD on server board.<br>
-					Firmware development on Micro-controller(AVR).<br>
-					Familiar with low speed interface.(I2C/SGPIO...)<br>
-					Program in Verilog/VHDL, C++, python.<br>
-				</h4>
-			</div>
+        <section>
+            <h2>Professional Summary</h2>
+            <div class="section-content">
+                <p>
+                    <b>Senior Digital Engineer</b>, specializing in <b>High-Speed SoC Integration</b> and <b>FPGA Emulation</b>. Expert in integrating complex IPs (Ethernet MAC, PCIe) and collaborating with backend teams to achieve timing closure at <b>1GHz+</b>. Extensive experience in <b>AXI-based IP design</b> and orchestration of post-silicon testing plans. Skilled in reducing SW verification cycle time by <b>30%</b> through optimized FPGA emulation strategies.
+                </p>
+            </div>
+        </section>
 
+        <section>
+            <h2>Work Experience</h2>
+            
+            <div class="job-entry">
+                <div class="company-header">
+                    <span class="company-name">Mediatek Inc.</span>
+                    <span class="location">HsinChu City, Taiwan</span>
+                </div>
 
-			<ul class="social-icon">
-				<li><a href="https://www.facebook.com/Arashinoon"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.linkedin.com/in/arashinoon/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-			</ul>
+                <div class="role-block">
+                    <div class="role-header">
+                        <span class="role-title">Senior Digital Engineer</span>
+                        <span class="role-date">2021/06 – Present</span>
+                    </div>
+                    <ul>
+                        <li><strong>High-Speed Integration:</strong> Integrated high-speed Ethernet MAC IPs into complex SoC subsystems and collaborated with backend teams to achieve timing closure at 1.1GHz.</li>
+                        <li><strong>FPGA Prototyping:</strong> Led FPGA prototyping efforts for next-generation SoC emulation, enabling early SW development and reducing verification cycle time by 30%.</li>
+                        <li><strong>Post-Silicon Testing:</strong> Orchestrated post-silicon testing plans and executed sample deliver procedures to ensure chip qualification and stability.</li>
+                    </ul>
+                </div>
 
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-title">
-						<h2>Contact</h2>
-					</div>
-				</div>
-			</div>
-			<!--.row-->
-			<div class="row">
-				<div class="col-md-6">
-					<address>
-						<strong>Mobile Number</strong><br>
-						+886 988 265583
-					</address>
-				</div>
-				<div class="col-md-6">
-					<address>
-						<strong>Email</strong><br>
-						<a href="mailto:ryan6309@gmail.com">ryan6309@gmail.com</a>
-					</address>
-				</div>
-			</div>
-		</div>
+                <div class="role-block">
+                    <div class="role-header">
+                        <span class="role-title">Digital Engineer</span>
+                        <span class="role-date">2019/09 – 2021/05</span>
+                    </div>
+                    <ul>
+                        <li><strong>IP Integration:</strong> Integrated Synopsys IPs(PCIe Gen5) into SoC designs, resolving CDC and connectivity issues.</li>
+                        <li><strong>RTL Design:</strong> Designed and verified block-level RTL for an AXI-compliant internal memory controller.</li>
+                        <li><strong>Emulation:</strong> Assisted in FPGA/Palladium emulation flow setup and debugging to accelerate system-level verification.</li>
+                    </ul>
+                </div>
+            </div>
 
-	</header>
-	<!-- .header-->
-</div>
-<!-- .left-col-block -->
+            <div class="job-entry">
+                <div class="company-header">
+                    <span class="company-name">Wiwynn Corp.</span>
+                    <span class="location">New Taipei City, Taiwan</span>
+                </div>
 
+                <div class="role-block">
+                    <div class="role-header">
+                        <span class="role-title">Senior Firmware Engineer</span>
+                        <span class="role-date">2017/05 – 2019/08</span>
+                    </div>
+                    <ul>
+                        <li>Spearheaded the CPLD/FPGA logic implementation for high-performance Intel/AMD server boards.</li>
+                        <li>Architected and implemented an OCP-compliant debug card using AVR microcontrollers and LCDs.</li>
+                    </ul>
+                </div>
 
-<div class="right-col-block blocks">
-<div class="theiaStickySidebar">
-<section class="expertise-wrapper section-wrapper gray-bg">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title">
-					<h2>Skill summary</h2>
-				</div>
-			</div>
-		</div>
-		<!-- .row -->
+                <div class="role-block">
+                    <div class="role-header">
+                        <span class="role-title">Firmware Engineer</span>
+                        <span class="role-date">2015/11 – 2017/05</span>
+                    </div>
+                    <ul>
+                        <li>Developed server board FPGA to support system power sequencing and management.</li>
+                        <li>Executed test functions to identify root causes during system bring-up and pilot runs.</li>
+                    </ul>
+                </div>
+            </div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<div class="expertise-item">
-					<h3>RTL-level Design</h3>
-					<ul class="resume">
-						<li>Implement Power Sequence/Interface bus/Debug tool on Intel/AMD platform.</li>
-						<li>Develop I2C auto switch and <a target="_blank" href ="https://twpat6.tipo.gov.tw/tipotwoc/tipotwkm?!!FR_I647570"><b>published</b></a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="expertise-item">
-					<h3>MCU development</h3>
-					<ul class="resume">
-						<li>Develop according to spec, debug using I2C/UART.</li>
-						<li>Build function for different platform.</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="expertise-item">
-					<h3>AI research</h3>
-					<ul class="resume">
-						<li>Learning from MOOC, share knowledge with team mate.</li>
-						<li>Develop AI application for COMPUTEX TAIPEI</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- .expertise-wrapper -->
+        </section>
 
-<section class="section-wrapper section-experience gray-bg">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title"><h2>Work Experience</h2></div>
-			</div>
-		</div>
-		<!--.row-->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="content-item">
-					<small>2015 - Present</small>
-					<h3>Senior Engineer</h3>
-					<h4>Wiwynn Corporation.</h4>
+        <section>
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li><strong>RTL Design & Verification:</strong> Verilog, SystemVerilog, FPGA Prototyping</li>
+                <li><strong>Domain Knowledge:</strong> High-speed Interface (MAC/PCIe), AMBA Bus, CDC/RDC, Synthesis, STA.</li>
+                <li><strong>Tools & Languages:</strong> Synopsys VCS, Verdi, DC, Genus, Vivado, Perl, Python, Shell Scripting.</li>
+            </ul>
+        </section>
 
-					<p>New Taipei City, Taiwan</p>
+        <section>
+            <h2>Education</h2>
+            <div class="section-content">
+                <div class="education-entry">
+                    <div class="education-header">
+                        <span>National Taiwan Normal University</span>
+                        <span class="location">2013 – 2015</span>
+                    </div>
+                    <div class="education-degree">Master of Science - MS, Computer Science</div>
+                </div>
+            </div>
+        </section>
 
-					<h4 style="line-height: 1.8;">
-						CPLD/FPGA<br>
-						- Server board function implement and maintain on Intel/AMD platform.<br>
-						- Co-work with other team, build test function to find the root cause.<br>
-						- Implement customer require function.<br>
-						<br>
-						Micro-controller<br>
-						- Based on AVR controller.<br>
-						- Implement <a target="_blank" href="https://www.opencompute.org/documents/facebook-ocp-debug-card-with-lcd-spec_v1p0"><b>OCP Debug Card with LCD</b></a> F/W.<br>
-						<br>
-						AI research<br>
-						- Research AI application on multi platform. (CPU,GPU,FPGA)<br>
-						- Demonstrate AI result for COMPUTEX TAIPEI 2018.<br>
-					</h4>
-				</div>
-				<!-- .experience-item -->
-			</div>
-		</div>
-		<!--.row-->
-	</div>
-	<!-- .container-fluid -->
+    </div>
 
-</section>
-<!-- .section-experience -->
-
-<section class="section-wrapper section-education">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title"><h2>Education</h2></div>
-			</div>
-		</div>
-		<!--.row-->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="content-item">
-					<small>2013 - 2015</small>
-					<h3>Master of Computer Science</h3>
-					<h4>National Taiwan Normal University</h4>
-
-					<p>Taipei, Taiwan</p>
-				</div>
-				<!-- .experience-item -->
-				<div class="content-item">
-					<small>2009 - 2013</small>
-					<h3>Bachelor of Computer Science</h3>
-					<h4>National Taipei University of Education</h4>
-
-					<p>Taipei, Taiwan</p>
-				</div>
-				<!-- .experience-item -->
-			</div>
-		</div>
-		<!--.row-->
-	</div>
-	<!-- .container-fluid -->
-
-</section>
-<!-- .section-education -->
-
-<section class="section-wrapper portfolio-section">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title">
-					<h2>Portfolio</h2>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<a class="portfolio-item" target="_blank"  href="https://twpat6.tipo.gov.tw/tipotwoc/tipotwkm?!!FR_I647570">
-					<div class="portfolio-thumb">
-						<img src="img/patent.png" alt="">
-					</div>
-
-					<div class="portfolio-info">
-						<h3>DATA TRANSMISSION APPARATUS AND METHOD THEREOF</h3>
-						<small>I647570</small>
-					</div>
-					<!-- portfolio-info -->
-				</a>
-				<!-- .portfolio-item -->
-			</div>
-		</div>
-		<!-- /.row -->
-	</div>
-</section>
-<!-- .portfolio -->
-
-<footer class="footer">
-	<div class="copyright-section">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="copytext">&copy; Resumex. All rights reserved | Design By: <a target="_blank" href="https://themehippo.com">themehippo</a></div>
-				</div>
-			</div>
-			<!--.row-->
-		</div>
-		<!-- .container-fluid -->
-	</div>
-	<!-- .copyright-section -->
-</footer>
-<!-- .footer -->
-</div>
-<!-- Sticky -->
-</div>
-<!-- .right-col-block -->
-</div>
-<!-- .columns-block -->
-</div>
-<!-- #main-wrapper -->
-
-<!-- jquery -->
-<script src="js/jquery-2.1.4.min.js"></script>
-
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/theia-sticky-sidebar.js"></script>
-<script src="js/scripts.js"></script>
 </body>
 </html>
