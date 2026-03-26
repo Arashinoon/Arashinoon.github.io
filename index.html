@@ -59,7 +59,7 @@
             color: var(--primary-color);
             border-bottom: 1px solid #ccc;
             padding-bottom: 2px;
-            margin-top: 12px;
+            margin-top: 15px;
             margin-bottom: 8px;
             font-size: 1.1em;
             text-transform: uppercase;
@@ -68,27 +68,27 @@
         p { margin: 0 0 5px 0; text-align: justify; }
 
         .job-entry {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .company-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 2px;
+            margin-bottom: 10px;
         }
 
-        .company-name { font-weight: bold; font-size: 1.05em; color: #000; }
+        .company-name { font-weight: bold; font-size: 1.25em; color: #000; }
         .location { font-style: italic; color: #666; font-size: 0.9em; }
 
         .role-block {
             padding-left: 12px;
             border-left: 2px solid #e0e0e0;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .role-block + .role-block {
-            margin-top: 8px;
+            margin-top: 10px;
         }
 
         .role-header {
@@ -98,7 +98,7 @@
             margin-bottom: 1px;
         }
 
-        .role-title { font-weight: 700; color: var(--primary-color); font-size: 0.95em; }
+        .role-title { font-weight: 700; color: var(--primary-color); font-size: 1.05em; }
         .role-date { font-family: 'Segoe UI', sans-serif; color: #666; font-size: 0.85em; }
 
         ul {
@@ -108,13 +108,15 @@
         }
 
         li {
-            margin-bottom: 2px;
+            margin-bottom: 3px;
             font-size: 0.95em;
         }
 
-        .skills-list li { margin-bottom: 1px; }
+        .skills-list li {
+            margin-bottom: 1px;
+        }
 
-        .education-entry { margin-bottom: 6px; }
+        .education-entry { margin-bottom: 10px; }
         .education-header {
             display: flex;
             justify-content: space-between;
@@ -126,16 +128,17 @@
             color: var(--primary-color);
             font-weight: 600;
             font-size: 0.95em;
-            margin-top: 0px;
+            margin-bottom: 8px;
         }
 
         @media print {
             @page {
-                margin: 0.5cm 1cm;
+                margin: 0.8cm 1.2cm;
                 size: A4;
             }
             body { background-color: #fff; -webkit-print-color-adjust: exact; }
             .resume-container { width: 100%; padding: 0; margin: 0; }
+            h2 { margin-top: 10px; }
         }
     </style>
 </head>
@@ -146,7 +149,7 @@
             <h1>Yuan-Pin Huang</h1> 
             <div class="job-title-main">Senior Digital Engineer</div>
             <div class="contact-info">
-                <span>HsinChu City, Taiwan</span> |
+                <span>Hsinchu City, Taiwan</span> |
                 <span><a href="mailto:ryan6309@gmail.com">ryan6309@gmail.com</a></span> |
                 <span>+886-988-265-583</span> |
                 <span><a href="https://www.linkedin.com/in/arashinoon/" target="_blank">linkedin.com/in/arashinoon</a></span>
@@ -157,7 +160,7 @@
             <h2>Professional Summary</h2>
             <div class="section-content">
                 <p>
-                    <b>Senior Digital Engineer</b> with extensive experience in <b>High-Speed IPs integration</b>, <b>AXI-based IP Design</b>, and <b>FPGA Prototyping</b>. Proven track record of integrating complex third-party IPs (<b>Rambus Ethernet, Synopsys PCIe Gen5</b>) and collaborating with APR teams using <b>Genus/Innovus</b> to achieve timing closure at <b>1.3GHz</b>. Successfully led FPGA emulation efforts that reduced verification cycle time by <b>30%</b> and orchestrated post-silicon qualification (<b>CP/FT</b>) to ensure on-schedule sample delivery.
+                    <b>Senior Digital Engineer</b> with over 6+ years of expertise in <b>High-Speed IP Integration</b>, <b>RTL Design</b>, and <b>FPGA Prototyping</b>. Proven track record in integrating complex third-party IPs (<b>Rambus MACsec, Synopsys PCIe Gen5</b>) and achieving timing closure at <b>1.3GHz</b>. Expert in bridging pre-silicon verification (HAPS) and post-silicon qualification (CP/FT) using industry-standard ATE (Advantest 93K), with a focus on de-risking system bring-up and optimizing verification cycles.
                 </p>
             </div>
         </section>
@@ -167,8 +170,8 @@
             
             <div class="job-entry">
                 <div class="company-header">
-                    <span class="company-name">Mediatek Inc.</span>
-                    <span class="location">HsinChu City, Taiwan</span>
+                    <span class="company-name">MediaTek Inc.</span>
+                    <span class="location">Hsinchu City, Taiwan</span>
                 </div>
 
                 <div class="role-block">
@@ -177,9 +180,10 @@
                         <span class="role-date">2021/06 – Present</span>
                     </div>
                     <ul>
-                        <li><strong>High-Speed Integration:</strong> Integrated Rambus Ethernet MAC IP into complex SoC subsystems and collaborated closely with APR teams using <b>Genus/Innovus</b> to achieve timing closure at <b>1.3GHz</b>.</li>
-                        <li><strong>FPGA Prototyping:</strong> Led FPGA prototyping for next-generation SoC emulation, enabling early SW development and reducing verification cycle time by 30% compared to the previous generation.</li>
-                        <li><strong>Post-Silicon Testing:</strong> Orchestrated post-silicon testing(CP/FT) plans and executed sample deliver to ensure chip qualification on schedule. </li>
+                        <li><strong>Digital Design & RTL:</strong> Designed and verified an AXI/AMBA-compliant Dual-Port SRAM Controller targeted at 533MHz. Proficient in protocol implementation and full front-end flow (Lint, CDC, Synthesis).</li>
+                        <li><strong>MACsec Integration (MT3775):</strong> Integrated Rambus MACsec into complex SoC subsystems, achieving 1.3GHz timing closure using Cadence Genus/Innovus. Successfully delivered IEEE 802.1AE 112G re-timer solution.</li>
+                        <li><strong>FPGA Prototyping (HAPS):</strong> Led <strong>HAPS-based</strong> emulation to de-risk system bring-up. Successfully validated low-power driver development in FPGA environment, reducing verification cycle time by <strong>30%</strong> compared to previous generations.</li>
+                        <li><strong>Post-Silicon & Testability:</strong> Orchestrated comprehensive post-silicon testplans. Defined pre-silicon test hardware (Probe Cards/Load Boards) and co-developed <strong>Advantest 93K</strong> test programs. Ensured critical testing IPs (JTAG, UART, SPI, GPIO) were fully verified for SoC integration.</li>
                     </ul>
                 </div>
 
@@ -189,8 +193,7 @@
                         <span class="role-date">2019/09 – 2021/05</span>
                     </div>
                     <ul>
-                        <li><strong>IP Integration:</strong> Integrated Synopsys PCIe Gen5 IP into SoC designs and applied a comprehensive front-end workflow (Lint, CDC, PA, DC, LEC), delivering a timing-clean, congestion-free database to APR teams for physical implementation.</li>
-                        <li><strong>RTL Design:</strong> Designed and verified an AXI-compliant Dual-Port SRAM Controller and verified its functionality and protocol compliance using VCS and industry-standard verification flows.(SNPS VIP)</li>
+                        <li><strong>PCIe Integration (MT66007):</strong> Integrated <strong>Synopsys PCIe Gen5</strong> MAC layer (1GHz) and applied a complete Lint/CDC/DC/LEC workflow, delivering a timing-clean database to APR teams. Successfully verified PCIe 5.0 32GT/s compliance at PCI-SIG.</li>
                         <li><strong>Emulation:</strong> Assisted in FPGA/Palladium emulation flow setup and debugging to accelerate system-level verification.</li>
                     </ul>
                 </div>
@@ -208,8 +211,10 @@
                         <span class="role-date">2017/05 – 2019/08</span>
                     </div>
                     <ul>
-                        <li>Spearheaded the FPGA implementation for high-performance Intel/AMD server boards.</li>
-                        <li>Architected and implemented an OCP-compliant debug card using AVR microcontrollers and LCDs.</li>
+                        <li><strong>Intel/AMD Server Platforms:</strong> Optimized boot sequences and complex power management logic using CPLD for high-performance server boards.</li>
+                        <li><strong>Debug Architecture:</strong> Architected and implemented an OCP-compliant debug card using AVR microcontrollers, significantly streamlining system diagnostics for engineering teams.</li>
+                        <li><strong>AI Acceleration & Prototyping:</strong> Deployed AI training acceleration on <strong>Intel Altera FPGAs</strong> using OpenVINO and TensorFlow. Demonstrated hardware implementation for CNN, GNN, and RL models.</li>
+                        <li><strong>Exhibition & Demo:</strong> Spearheaded the AI-capable FPGA server demo at <strong>Computex</strong>, showcasing real-time training and inference capabilities to global clients.</li>
                     </ul>
                 </div>
 
@@ -219,8 +224,8 @@
                         <span class="role-date">2015/11 – 2017/05</span>
                     </div>
                     <ul>
-                        <li>Developed server board FPGA to support system power sequencing and management.</li>
-                        <li>Executed test functions to identify root causes during system bring-up and pilot runs.</li>
+                        <li><strong>CPLD:</strong> Developed CPLD logic for power sequencing, LED control, and communication interfaces (I2C, SPI) to <strong>BMC chips</strong>.</li>
+                        <li>Executed rigorous test functions to identify root causes during system bring-up and pilot run phases.</li>
                     </ul>
                 </div>
             </div>
@@ -230,9 +235,10 @@
         <section>
             <h2>Technical Skills</h2>
             <ul class="skills-list">
-                <li><strong>RTL Design & Verification:</strong> Verilog, SystemVerilog, FPGA Prototyping</li>
-                <li><strong>Domain Knowledge:</strong> High-speed Interface (Ethernet MAC/PCIe), AMBA, CDC, Synthesis, STA.</li>
-                <li><strong>Tools & Languages:</strong> VCS, Verdi, DC, Genus, Innovus, PrimeTime Vivado, Perl, Python, Shell Scripting.</li>
+                <li><strong>Design & Verification:</strong> Verilog, SystemVerilog, Control IP Design, FPGA Prototyping.</li>
+                <li><strong>Domain Knowledge:</strong> PCIe Gen5, AMBA (AXI/APB), CDC/RDC, Synthesis, STA.</li>
+                <li><strong>Tools & Flows:</strong> Synopsys (VCS, Verdi, DC, SpyGlass), Cadence (Genus, Innovus, LEC), Xilinx Vivado.</li>
+                <li><strong>Scripting & Languages:</strong> Python, Tcl, Shell Scripting, C/C++.</li>
             </ul>
         </section>
 
@@ -241,10 +247,16 @@
             <div class="section-content">
                 <div class="education-entry">
                     <div class="education-header">
-                        <span>National Taiwan Normal University</span>
+                        <span>National Taiwan Normal University (NTNU)</span>
                         <span class="location">2013 – 2015</span>
                     </div>
-                    <div class="education-degree">Master of Science - MS, Computer Science</div>
+                    <div class="education-degree">Master of Science, M.S. in Computer Science and Information Engineering (CSIE)</div>
+                    
+                    <div class="education-header" style="margin-top: 10px;">
+                        <span>National Taipei University of Education (NTUE)</span>
+                        <span class="location">2009 – 2013</span>
+                    </div>
+                    <div class="education-degree">Bachelor of Science, B.S. in Computer Science (CS)</div>
                 </div>
             </div>
         </section>
