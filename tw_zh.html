@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黃元品 (Yuan-Pin Huang)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, "Microsoft JhengHei";
+            line-height: 1.5;
+            font-size: 11pt;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        a { color: var(--accent-color); text-decoration: none; }
+        
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            line-height: 1.1;
+            letter-spacing: 2px;
+        }
+
+        .job-title-main {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 600;
+            margin: 3px 0;
+        }
+
+        .contact-info { font-size: 0.9em; color: #555; margin-top: 3px; }
+        .contact-info span { margin: 0 3px; }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 2px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+
+        p { margin: 0 0 5px 0; text-align: justify; }
+
+        .job-entry {
+            margin-bottom: 15px;
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .company-name { font-weight: bold; font-size: 1.25em; color: #000; }
+        .location { font-style: italic; color: #666; font-size: 0.9em; }
+
+        .role-block {
+            padding-left: 12px;
+            border-left: 2px solid #e0e0e0;
+            margin-bottom: 6px;
+        }
+
+        .role-block + .role-block {
+            margin-top: 10px;
+        }
+
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .role-title { font-weight: 700; color: var(--primary-color); font-size: 1.05em; }
+        .role-date { font-family: 'Segoe UI', sans-serif; color: #666; font-size: 0.85em; }
+
+        ul {
+            margin-top: 2px;
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 3px;
+            font-size: 0.95em;
+        }
+
+        .skills-list li {
+            margin-bottom: 1px;
+        }
+
+        .education-entry { margin-bottom: 10px; }
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 0.95em;
+            color: #000;
+        }
+        .education-degree {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+
+        @media print {
+            @page {
+                margin: 0.8cm 1.2cm;
+                size: A4;
+            }
+            body { background-color: #fff; -webkit-print-color-adjust: exact; }
+            .resume-container { width: 100%; padding: 0; margin: 0; }
+            h2 { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        <header>
+            <h1>黃元品 (Yuan-Pin Huang)</h1> 
+            <div class="job-title-main">Senior Digital Engineer</div>
+            <div class="contact-info">
+                <span>台灣新竹市</span> |
+                <span><a href="mailto:ryan6309@gmail.com">ryan6309@gmail.com</a></span> |
+                <span>+886-988-265-583</span> |
+                <span><a href="https://www.linkedin.com/in/arashinoon/" target="_blank">linkedin.com/in/arashinoon</a></span>
+            </div>
+        </header>
+
+        <section>
+            <h2>專業總覽 (Professional Summary)</h2>
+            <div class="section-content">
+                <p>
+                    擁有 6 年以上<b>高速 IP 整合 (High-Speed IP Integration)</b>、<b>RTL 設計</b>與 <b>FPGA Prototyping</b>. 具備第三方 IP(如 <b>Rambus MACsec、Synopsys PCIe Gen5</b>)的整合實績, 並達成 <b>1.3GHz</b> Timing Closure Tape-Out. 銜接pre-silicon (FPGA) 與 post-silicon (CP/FT), 致力於降低系統啟動 (System Bring-up) 風險並優化驗證週期. 
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>工作經歷 (Work Experience)</h2>
+            
+            <div class="job-entry">
+                <div class="company-header">
+                    <span class="company-name">聯發科技 (MediaTek Inc.)</span>
+                    <span class="location">台灣新竹市</span>
+                </div>
+
+                <div class="role-block">
+                    <div class="role-header">
+                        <span class="role-title">Senior Digital Engineer</span>
+                        <span class="role-date">2021/06 – 至今</span>
+                    </div>
+                    <ul>
+                        <li><strong>Digital Design</strong> 設計並驗證符合 AXI3/AMBA 協定的SP SRAM 控制器( 533MHz). 精通協定實作與完整前段設計流程 (Lint、CDC、Synthesis). </li>
+                        <li><strong>MACsec IP 整合:</strong> 將 Rambus MACsec 整合至複雜的 SoC 子系統中, 並使用 Cadence Genus/Innovus 達成 1.3GHz 的timing Closure. 成功交付符合 IEEE 802.1AE 標準的 112G Re-timer 解決方案. </li>
+                        <li><strong>FPGA (HAPS):</strong> 主導基於 <strong>HAPS</strong> 的硬體模擬 (Emulation) 以降低系統啟動風險. 在 FPGA 環境中成功驗證低功耗驅動程式開發, 較前代產品減少 <strong>30%</strong> 的驗證週期時間. </li>
+                        <li><strong>Post-silicon:</strong> 規劃完整的post-silicon test plan. 定義測試硬體(Probe Cards / Load Boards), 並協同開發 <strong>Advantest 93K</strong> 測試程式. 確保關鍵測試 IP 在 SoC 整合中皆通過完整驗證. </li>
+                    </ul>
+                </div>
+
+                <div class="role-block">
+                    <div class="role-header">
+                        <span class="role-title">Digital Engineer</span>
+                        <span class="role-date">2019/09 – 2021/05</span>
+                    </div>
+                    <ul>
+                        <li><strong>PCIe IP Integ. (MT66007):</strong> 整合 <strong>Synopsys PCIe Gen5</strong> MAC 層 (1GHz), 並執行完整的 Lint / CDC / DC / LEC 工作流, 交付 QC clean database 給 APR team. 成功通過 PCI-SIG 的 PCIe 5.0 32GT/s 合規性認證. </li>
+                        <li><strong>Emulation:</strong> 協助建立 FPGA / Palladium 硬體模擬流程並進行除錯, 以加速系統級驗證. </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job-entry">
+                <div class="company-header">
+                    <span class="company-name">緯穎科技 (Wiwynn Corp.)</span>
+                    <span class="location">台灣新北市</span>
+                </div>
+
+                <div class="role-block">
+                    <div class="role-header">
+                        <span class="role-title">Senior Engineer</span>
+                        <span class="role-date">2017/05 – 2019/08</span>
+                    </div>
+                    <ul>
+                        <li><strong>Intel/AMD 伺服器平台:</strong> 使用 CPLD 針對高效能伺服器主機板優化開機程序 (Boot Sequences) 與複雜的電源管理邏輯. </li>
+                        <li><strong>除錯架構設計:</strong> 使用 AVR 微控制器架構並實作符合 OCP 標準的除錯卡 (Debug Card), 顯著簡化工程團隊的系統診斷流程. </li>
+                        <li><strong>AI 加速與原型製作:</strong> 使用 OpenVINO 與 TensorFlow 在 <strong>Intel Altera FPGA</strong> 上佈署 AI 訓練加速. 實現 CNN、GNN 及強化學習 (RL) 模型的硬體實作. </li>
+                        <li><strong>展覽與展示:</strong> 主導 Computex 上的 AI 功能 FPGA 伺服器展示, 向全球客戶展示即時訓練與推論能力. </li>
+                    </ul>
+                </div>
+
+                <div class="role-block">
+                    <div class="role-header">
+                        <span class="role-title">Engineer</span>
+                        <span class="role-date">2015/11 – 2017/05</span>
+                    </div>
+                    <ul>
+                        <li><strong>CPLD:</strong> 開發用於電源時序控制 (Power Sequencing)、LED 控制以及至 <strong>BMC 晶片</strong>通訊介面 (I2C、SPI) 的 CPLD 邏輯. </li>
+                        <li><strong>Bring-up:</strong> 在 System Bring-up 和 Pilot Run 階段執行嚴格的測試, 找出根本原因 (Root Causes) 並解決問題. </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>專業技能 (Technical Skills)</h2>
+            <ul class="skills-list">
+                <li><strong>Design & Verification:</strong> Verilog, SystemVerilog, 控制 IP 設計 (Control IP Design), FPGA 原型驗證 (FPGA Prototyping)</li>
+                <li><strong>Domain Knowledge:</strong> PCIe Gen5, AMBA (AXI/APB), CDC/RDC, 邏輯合成 (Synthesis), 靜態時序分析 (STA)</li>
+                <li><strong>Tools & Flows:</strong>
+                    <ul>
+                        <li><strong>Synopsys:</strong> VCS, Verdi, DC (Design Compiler), SpyGlass</li>
+                        <li><strong>Cadence:</strong> Genus, Innovus, LEC</li>
+                        <li><strong>其他:</strong> Xilinx Vivado</li>
+                    </ul>
+                </li>
+                <li><strong>Scripting & Languages:</strong> Python, Tcl, Shell Scripting, C/C++</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>教育背景 (Education)</h2>
+            <div class="section-content">
+                <div class="education-entry">
+                    <div class="education-header">
+                        <span>國立臺灣師範大學 (NTNU)</span>
+                        <span class="location">2013 – 2015</span>
+                    </div>
+                    <div class="education-degree">資訊工程學系 碩士 (M.S. in Computer Science and Information Engineering, CSIE)</div>
+                    
+                    <div class="education-header" style="margin-top: 10px;">
+                        <span>國立臺北教育大學 (NTUE)</span>
+                        <span class="location">2009 – 2013</span>
+                    </div>
+                    <div class="education-degree">資訊科學學系 學士 (B.S. in Computer Science, CS)</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
