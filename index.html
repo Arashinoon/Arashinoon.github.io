@@ -1,267 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Yuan-Pin Huang</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuan-Pin Huang - Staff Engineer, Digital IC Design & SoC Integration</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --bg-color: #fff;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-500: #64748b;
+            --sky-800: #075985;
+            --sky-700: #0369a1;
+            --sky-50: #f0f9ff;
+            --border-light: #e2e8f0;
+            --bg-panel: #f8fafc;
+            --white: #ffffff;
         }
 
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.5;
-            font-size: 11pt;
-            color: var(--text-color);
-            background-color: var(--bg-color);
             margin: 0;
-            padding: 20px;
+            padding: 32px 40px;
+            background: var(--white);
+            color: var(--slate-800);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.44;
+            -webkit-font-smoothing: antialiased;
         }
 
         .resume-container {
-            max-width: 850px;
+            max-width: 940px;
             margin: 0 auto;
-            padding: 0;
         }
 
-        a { color: var(--accent-color); text-decoration: none; }
-        
+        a {
+            color: var(--sky-800);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        a:hover { border-bottom-color: var(--sky-800); }
+
         header {
-            text-align: center;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
+            border-bottom: 3px solid var(--slate-900);
+            padding-bottom: 16px;
+            margin-bottom: 22px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 20px;
         }
 
         h1 {
             margin: 0;
-            font-size: 2.2em;
-            color: var(--primary-color);
+            color: var(--slate-900);
+            font-size: 28pt;
+            line-height: 0.95;
+            font-weight: 850;
+            letter-spacing: -0.02em;
             text-transform: uppercase;
-            line-height: 1.1;
         }
 
-        .job-title-main {
-            font-size: 1.1em;
-            color: #666;
-            font-weight: 600;
-            margin: 3px 0;
+        .professional-title {
+            margin-top: 8px;
+            color: var(--sky-700);
+            font-size: 12.3pt;
+            font-weight: 800;
+            letter-spacing: 0.015em;
         }
 
-        .contact-info { font-size: 0.9em; color: #555; margin-top: 3px; }
-        .contact-info span { margin: 0 3px; }
+        .subtitle {
+            margin-top: 4px;
+            color: var(--slate-700);
+            font-size: 9.8pt;
+            font-weight: 650;
+        }
+
+        .meta-contact {
+            text-align: right;
+            color: var(--slate-500);
+            font-size: 9.3pt;
+            line-height: 1.45;
+            white-space: nowrap;
+        }
+
+        section { margin-top: 24px; }
 
         h2 {
-            color: var(--primary-color);
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 2px;
-            margin-top: 15px;
-            margin-bottom: 8px;
-            font-size: 1.1em;
+            color: var(--slate-900);
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 6px;
+            margin: 0 0 12px;
+            font-size: 11pt;
+            font-weight: 800;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
         }
 
-        p { margin: 0 0 5px 0; text-align: justify; }
+        p { margin: 0 0 8px; }
 
-        .job-entry {
-            margin-bottom: 15px;
+        .executive-summary {
+            text-align: justify;
+            color: var(--slate-800);
+            font-size: 10.4pt;
         }
 
-        .company-header {
+        .metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .metric-block {
+            background: var(--sky-50);
+            border: 1px solid #bae6fd;
+            border-radius: 6px;
+            padding: 10px 12px;
+            text-align: center;
+            min-height: 62px;
+        }
+
+        .metric-block .value {
+            display: block;
+            color: var(--slate-900);
+            font-size: 13pt;
+            line-height: 1;
+            font-weight: 900;
+        }
+
+        .metric-block .description {
+            display: block;
+            margin-top: 4px;
+            color: var(--slate-700);
+            font-size: 8.2pt;
+            line-height: 1.22;
+            font-weight: 600;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 10px;
+            margin-top: 4px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            background: var(--bg-panel);
+            color: var(--slate-900);
+            font-size: 8.8pt;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .timeline-entity { margin-bottom: 22px; }
+
+        .entity-header,
+        .role-header,
+        .edu-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 10px;
+            gap: 16px;
         }
 
-        .company-name { font-weight: bold; font-size: 1.25em; color: #000; }
-        .location { font-style: italic; color: #666; font-size: 0.9em; }
-
-        .role-block {
-            padding-left: 12px;
-            border-left: 2px solid #e0e0e0;
-            margin-bottom: 6px;
+        .entity-name {
+            color: var(--slate-900);
+            font-size: 12.5pt;
+            font-weight: 850;
         }
 
-        .role-block + .role-block {
-            margin-top: 10px;
+        .meta-text {
+            color: var(--slate-500);
+            font-size: 9pt;
+            font-weight: 500;
+            white-space: nowrap;
         }
 
-        .role-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1px;
+        .role-wrapper {
+            margin-top: 12px;
+            padding-left: 16px;
+            border-left: 3px solid var(--border-light);
         }
 
-        .role-title { font-weight: 700; color: var(--primary-color); font-size: 1.05em; }
-        .role-date { font-family: 'Segoe UI', sans-serif; color: #666; font-size: 0.85em; }
+        .role-wrapper.lead-track { border-left-color: var(--sky-700); }
+
+        .role-designation {
+            color: var(--slate-900);
+            font-size: 10.3pt;
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+
+        .charter-scope {
+            margin: 4px 0 10px;
+            color: var(--slate-500);
+            font-size: 9pt;
+            font-style: italic;
+        }
 
         ul {
-            margin-top: 2px;
-            padding-left: 18px;
-            margin-bottom: 0;
+            margin: 0;
+            padding-left: 16px;
         }
 
         li {
-            margin-bottom: 3px;
-            font-size: 0.95em;
+            margin-bottom: 6px;
+            text-align: justify;
         }
 
-        .skills-list li {
-            margin-bottom: 1px;
+        li:last-child { margin-bottom: 0; }
+
+        .bullet-tag {
+            color: var(--sky-800);
+            font-weight: 800;
         }
 
-        .education-entry { margin-bottom: 10px; }
-        .education-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 0.95em;
-            color: #000;
+        .tech-highlight,
+        strong {
+            color: #000000;
+            font-weight: 750;
         }
-        .education-degree {
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 0.95em;
-            margin-bottom: 8px;
+
+        .portfolio-matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 18px;
         }
+
+        .portfolio-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            padding: 10px 14px;
+            line-height: 1.38;
+        }
+
+        .portfolio-card strong {
+            color: var(--slate-900);
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .skills-table {
+            display: grid;
+            grid-template-columns: 185px 1fr;
+            gap: 12px 24px;
+            line-height: 1.45;
+        }
+
+        .skills-category {
+            color: var(--slate-900);
+            font-weight: 800;
+        }
+
+        .edu-spec {
+            color: var(--slate-700);
+            margin-top: 2px;
+            margin-bottom: 12px;
+            font-size: 9.5pt;
+        }
+        .edu-spec:last-child { margin-bottom: 0; }
 
         @media print {
-            @page {
-                margin: 0.8cm 1.2cm;
-                size: A4;
+            @page { size: A4; margin: 0.75cm 1.1cm; }
+            body {
+                padding: 0;
+                font-size: 9.55pt;
+                line-height: 1.33;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
-            body { background-color: #fff; -webkit-print-color-adjust: exact; }
-            .resume-container { width: 100%; padding: 0; margin: 0; }
-            h2 { margin-top: 10px; }
+            header { margin-bottom: 13px; padding-bottom: 10px; }
+            h1 { font-size: 25pt; }
+            .professional-title { font-size: 11pt; }
+            .subtitle { font-size: 8.8pt; }
+            .meta-contact { font-size: 8.4pt; }
+            section { margin-top: 14px; }
+            h2 { margin-bottom: 6px; padding-bottom: 4px; font-size: 10.2pt; }
+            .metrics-bar { gap: 8px; margin-top: 8px; }
+            .metric-block { padding: 6px 8px; min-height: 48px; }
+            .metric-block .value { font-size: 11pt; }
+            .metric-block .description { font-size: 7.5pt; }
+            .badge { font-size: 8pt; padding: 1.5px 7px; }
+            .badge-container { gap: 4px 7px; }
+            .role-wrapper { margin-top: 8px; padding-left: 12px; }
+            .charter-scope { margin-bottom: 6px; }
+            li { margin-bottom: 3.5px; }
+            .portfolio-matrix { gap: 8px 14px; }
+            .portfolio-card { padding: 8px 12px; }
+            .skills-table { gap: 7px 18px; }
+            .metric-block, .role-wrapper, .portfolio-card { break-inside: avoid; }
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 16px; }
+            .header-grid, .entity-header, .role-header, .edu-header { display: block; }
+            .meta-contact { text-align: left; margin-top: 8px; white-space: normal; }
+            .metrics-bar, .portfolio-matrix, .skills-table { grid-template-columns: 1fr; }
+            .meta-text { white-space: normal; }
         }
     </style>
 </head>
 <body>
-
-    <div class="resume-container">
+    <main class="resume-container">
         <header>
-            <h1>Yuan-Pin Huang</h1> 
-            <div class="job-title-main">Senior Digital Engineer</div>
-            <div class="contact-info">
-                <span>Hsinchu City, Taiwan</span> |
-                <span><a href="mailto:ryan6309@gmail.com">ryan6309@gmail.com</a></span> |
-                <span>+886-988-265-583</span> |
-                <span><a href="https://www.linkedin.com/in/arashinoon/" target="_blank">linkedin.com/in/arashinoon</a></span>
+            <div class="header-grid">
+                <div>
+                    <h1>Yuan-Pin Huang</h1>
+                    <div class="professional-title">Staff Engineer | Digital IC Design &amp; SoC Integration</div>
+                    <div class="subtitle">Architecture Definition · Cross-Team Closure Criteria · RTL Design · SoC/IP Integration · FPGA Emulation · Silicon Bring-up</div>
+                </div>
+                <div class="meta-contact">
+                    Hsinchu City, Taiwan<br />
+                    <a href="mailto:ryan6309@gmail.com">ryan6309@gmail.com</a> · +886-988-265-583<br />
+                    <a href="https://www.linkedin.com/in/arashinoon/" target="_blank" rel="noopener">linkedin.com/in/arashinoon</a>
+                </div>
             </div>
         </header>
 
         <section>
-            <h2>Professional Summary</h2>
-            <div class="section-content">
-                <p>
-                    <b>Senior Digital Engineer</b> with over 6+ years of expertise in <b>High-Speed IP Integration</b>, <b>RTL Design</b>, and <b>FPGA Prototyping</b>. Proven track record in integrating complex third-party IPs (<b>Rambus MACsec, Synopsys PCIe Gen5</b>) and achieving timing closure at <b>1.3GHz</b>. Expert in bridging pre-silicon verification (HAPS) and post-silicon qualification (CP/FT) using industry-standard ATE (Advantest 93K), with a focus on de-risking system bring-up and optimizing verification cycles.
-                </p>
+            <h2>Executive Summary</h2>
+            <p class="executive-summary">
+                MediaTek E9 / Staff Engineer with 10+ years of experience spanning ASIC RTL design, SoC/IP integration, FPGA/CPLD development, full-SoC emulation, physical-aware implementation, and design-driven silicon productization. Defines subsystem architecture boundaries, integration contracts, closure criteria, and pre-silicon de-risk plans across RTL, DV, DFT, APR, emulation, and post-silicon teams. Owned AXI-based SRAM controller subsystems across advanced-node modem SoCs, integrated 112G retimer/MACsec IP and PCIe Gen5 test-chip IP, and drove HAPS/Palladium-class validation milestones to reduce bring-up risk. Strong fit for Staff roles requiring architecture definition, technical risk review, cross-team sign-off readiness, and execution from pre-silicon definition through production ramp.
+            </p>
+            <div class="metrics-bar">
+                <div class="metric-block"><span class="value">E9</span><span class="description">Staff Engineer Level, 2026</span></div>
+                <div class="metric-block"><span class="value">728 MHz</span><span class="description">N4 SRAM Controller Closure</span></div>
+                <div class="metric-block"><span class="value">1.308 GHz</span><span class="description"> 112G Retimer / MACsec</span></div>
+                <div class="metric-block"><span class="value">5M+ Cells</span><span class="description">Large-Scale IP Integration</span></div>
+                <div class="metric-block"><span class="value">4× HAPS</span><span class="description">Multi-FPGA Full-SoC Emulation</span></div>
             </div>
         </section>
 
         <section>
-            <h2>Work Experience</h2>
-            
-            <div class="job-entry">
-                <div class="company-header">
-                    <span class="company-name">MediaTek Inc.</span>
-                    <span class="location">Hsinchu City, Taiwan</span>
+            <h2>Core Competencies</h2>
+            <div class="badge-container">
+                <span class="badge">Architecture Definition</span>
+                <span class="badge">Architecture Review</span>
+                <span class="badge">RTL Design</span>
+                <span class="badge">SoC / IP Integration</span>
+                <span class="badge">AXI3 / AMBA</span>
+                <span class="badge">SRAM Controller</span>
+                <span class="badge">Low-Power Control</span>
+                <span class="badge">PCIe Gen5 Test Chip</span>
+                <span class="badge">112G Retimer / MACsec</span>
+                <span class="badge">Lint / CDC</span>
+                <span class="badge">DFT / MBIST</span>
+                <span class="badge">Synthesis / STA Collaboration</span>
+                <span class="badge">Clock Constraints</span>
+                <span class="badge">Closure Criteria</span>
+                <span class="badge">Sign-off Readiness</span>
+                <span class="badge">HAPS / Palladium</span>
+                <span class="badge">FPGA Bring-up</span>
+                <span class="badge">Risk Decomposition</span>
+                <span class="badge">Post-Silicon Debug</span>
+                <span class="badge">Yield / DPPM Tracking</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="timeline-entity">
+                <div class="entity-header">
+                    <span class="entity-name">MediaTek Inc.</span>
+                    <span class="meta-text">Hsinchu City, Taiwan · 2019/9 – Present</span>
                 </div>
 
-                <div class="role-block">
+                <div class="role-wrapper lead-track">
                     <div class="role-header">
-                        <span class="role-title">Senior Digital Engineer</span>
-                        <span class="role-date">2021/06 – Present</span>
+                        <span class="role-designation">Staff Engineer / Subsystem &amp; Cross-Team Closure Owner</span>
+                        <span class="meta-text">E9: 2026/6 – Present · E8: 2021/6 – 2026/6</span>
                     </div>
+                    <div class="charter-scope">Charter: architecture-level definition, integration closure, pre-silicon de-risking, and design-aware productization across advanced-node modem SoCs, 112G retimer, PCIe Gen5 test chip, and AI accelerator programs; promoted to E9 Staff Engineer in 2026 after E8 Senior Design Engineer promotion in 2021.</div>
                     <ul>
-                        <li><strong>Digital Design & RTL:</strong> Designed and verified an AXI/AMBA-compliant Dual-Port SRAM Controller targeted at 533MHz. Proficient in protocol implementation and full front-end flow (Lint, CDC, Synthesis).</li>
-                        <li><strong>MACsec Integration:</strong> Integrated Rambus MACsec into complex SoC subsystems, achieving 1.3GHz timing closure using Cadence Genus/Innovus. Successfully delivered IEEE 802.1AE 112G re-timer solution.</li>
-                        <li><strong>FPGA Prototyping (HAPS):</strong> Led <strong>HAPS-based</strong> emulation to de-risk system bring-up. Successfully validated low-power driver development in FPGA environment, reducing verification cycle time by <strong>30%</strong> compared to previous generations.</li>
-                        <li><strong>Post-Silicon & Testability:</strong> Orchestrated comprehensive post-silicon testplans. Defined pre-silicon test hardware (Probe Cards/Load Boards) and co-developed <strong>Advantest 93K</strong> test programs. Ensured critical testing IPs (JTAG, UART, SPI, GPIO) were fully verified for SoC integration.</li>
+                        <li><span class="bullet-tag">Architecture definition &amp; review:</span> Defined SRAM controller integration boundaries, AXI3 transaction behavior, 8-way interleave assumptions, low-power <code>SLEEPB</code> policy, CDC/DFT/MBIST expectations, and timing-constraint handoff criteria with SoC, DV, DFT, and APR stakeholders.</li>
+                        <li><span class="bullet-tag">Cross-team closure framework:</span> Established practical closure checkpoints for RTL quality, CDC cleanliness, MBIST/DFT insertion readiness, synthesis constraints, APR handoff, emulation milestones, and post-silicon debug coverage to keep subsystem risks visible before tape-out and bring-up.</li>
+                        <li><span class="bullet-tag">Memory subsystem ownership:</span> Owned AXI3-compliant SRAM controller subsystems across MT6980 / MT6990 / MT2737 / MT6986 / MT6988 / MT2739 modem programs, covering RTL design, controller implementation, verification, Lint/CDC, MBIST/DFT insertion, synthesis, clock-tree constraints, and APR timing-closure collaboration.</li>
+                        <li><span class="bullet-tag">1408KB SRAM controller:</span> Designed and delivered a single-port TSMC SRAM controller with 8-way interleave and automatic low-power <code>SLEEPB</code> management; closed timing at <span class="tech-highlight">728 MHz</span> for a <span class="tech-highlight">200K+ cell</span>, <span class="tech-highlight">350K μm²</span> subsystem on N4 modem products.</li>
+                        <li><span class="bullet-tag">512KB SRAM controller:</span> Previously delivered AXI3-compliant single-port SRAM controller at <span class="tech-highlight">533 MHz</span>, covering <span class="tech-highlight">50K+ cells</span> and <span class="tech-highlight">175K μm²</span> area, with full RTL-to-implementation ownership.</li>
+                        <li><span class="bullet-tag">112G retimer / MACsec sign-off readiness:</span> Integrated Rambus MACsec subsystem and defined front-to-backend closure checkpoints for DFT insertion, synthesis, clock constraints, congestion/timing risk, and APR handoff; coordinated with APR stakeholders to achieve timing closure at <span class="tech-highlight">1.308 GHz</span> on a <span class="tech-highlight">5M+ cell</span>, <span class="tech-highlight">3.5M μm²</span> block.</li>
+                        <li><span class="bullet-tag">Emulation de-risk plan:</span> Translated architecture and bring-up risks into HAPS/Palladium validation milestones for modem and retimer projects; connected <span class="tech-highlight">four HAPS-80 systems</span> through HT3 cables for whole-chip verification and system-level debug readiness.</li>
+                        <li><span class="bullet-tag">Bring-up risk reduction:</span> Early-ported low-power behavior into FPGA emulation to validate power-state assumptions before silicon; integrated thermal controller logic and coordinated sensor-position planning with SoC and physical-design stakeholders.</li>
+                        <li><span class="bullet-tag">Design-aware productization readiness:</span> Converted design intent into production test readiness by driving Day-0 coverage/pass-rate tracking, JTAG/UART/GPIO testability verification, probe card/load board capability definition, test-flow/program definition, yield/DPPM tracking, and MP flow/program release for MT6986 / MT2739 and TPU v7 programs.</li>
                     </ul>
                 </div>
 
-                <div class="role-block">
+                <div class="role-wrapper">
                     <div class="role-header">
-                        <span class="role-title">Digital Engineer</span>
-                        <span class="role-date">2019/09 – 2021/05</span>
+                        <span class="role-designation">Digital IC Design Engineer</span>
+                        <span class="meta-text">E7: 2019/9 – 2021/5</span>
                     </div>
+                    <div class="charter-scope">MT66007 PCIe Gen5 test chip, third-party IP verification support, Palladium/HAPS emulation environment setup; started as E7 Design Engineer.</div>
                     <ul>
-                        <li><strong>PCIe Integration (MT66007):</strong> Integrated <strong>Synopsys PCIe Gen5</strong> MAC layer (1GHz) and applied a complete Lint/CDC/DC/LEC workflow, delivering a timing-clean database to APR teams. Successfully verified PCIe 5.0 32GT/s compliance at PCI-SIG.</li>
-                        <li><strong>Emulation:</strong> Assisted in FPGA/Palladium emulation flow setup and debugging to accelerate system-level verification.</li>
+                        <li><span class="bullet-tag">PCIe Gen5 integration contract:</span> Integrated Synopsys PCIe Gen5 MAC into ASIC test-chip environment and aligned MAC/PHY/DV/APR interfaces, Lint/CDC expectations, MBIST insertion scope, local VIP setup, and PHY/MAC co-verification criteria.</li>
+                        <li><span class="bullet-tag">Cross-functional closure:</span> Partnered with DV, PHY, BE, and APR teams to close verification and implementation risks, pass PHY+MAC test plans, and reach timing closure at <span class="tech-highlight">1 GHz</span>.</li>
+                        <li><span class="bullet-tag">Emulation enablement:</span> Supported ASIC project emulation tasks and helped build Synopsys FPGA environment components for faster system-level validation and debug.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="job-entry">
-                <div class="company-header">
-                    <span class="company-name">Wiwynn Corp.</span>
-                    <span class="location">New Taipei City, Taiwan</span>
+            <div class="timeline-entity">
+                <div class="entity-header">
+                    <span class="entity-name">Wiwynn Corp.</span>
+                    <span class="meta-text">New Taipei City, Taiwan · 2015/11 – 2019/8</span>
                 </div>
-
-                <div class="role-block">
+                <div class="role-wrapper">
                     <div class="role-header">
-                        <span class="role-title">Senior Engineer</span>
-                        <span class="role-date">2017/05 – 2019/08</span>
+                        <span class="role-designation">Server FPGA / CPLD Design Engineer</span>
+                        <span class="meta-text">2015/11 – 2019/8</span>
                     </div>
+                    <div class="charter-scope">Hyperscale server CPLD/FPGA control logic, platform debug architecture, and FPGA-based AI demonstration platforms.</div>
                     <ul>
-                        <li><strong>Intel/AMD Server Platforms:</strong> Optimized boot sequences and complex power management logic using CPLD for high-performance server boards.</li>
-                        <li><strong>Debug Architecture:</strong> Architected and implemented an OCP-compliant debug card using AVR microcontrollers, significantly streamlining system diagnostics for engineering teams.</li>
-                        <li><strong>AI Acceleration & Prototyping:</strong> Deployed AI training acceleration on <strong>Intel Altera FPGAs</strong> using OpenVINO and TensorFlow. Demonstrated hardware implementation for CNN, GNN, and RL models.</li>
-                        <li><strong>Exhibition & Demo:</strong> Spearheaded the AI-capable FPGA server demo at <strong>Computex</strong>, showcasing real-time training and inference capabilities to global clients.</li>
-                    </ul>
-                </div>
-
-                <div class="role-block">
-                    <div class="role-header">
-                        <span class="role-title">Engineer</span>
-                        <span class="role-date">2015/11 – 2017/05</span>
-                    </div>
-                    <ul>
-                        <li><strong>CPLD:</strong> Developed CPLD logic for power sequencing, LED control, and communication interfaces (I2C, SPI) to <strong>BMC chips</strong>.</li>
-                        <li>Executed rigorous test functions to identify root causes during system bring-up and pilot run phases.</li>
+                        <li><span class="bullet-tag">Server control logic:</span> Developed CPLD/FPGA logic for server power control, LED control, debug interfaces, I2C/SPI connectivity, and BMC communication on server boards.</li>
+                        <li><span class="bullet-tag">Debug architecture:</span> Architected and implemented an OCP-compliant debug card using AVR microcontrollers, improving engineering diagnostics and platform bring-up efficiency.</li>
+                        <li><span class="bullet-tag">FPGA AI demonstration:</span> Built Intel Altera FPGA-based server platform capabilities for AI training demos using OpenVINO / TensorFlow workloads, including CNN, GNN, and reinforcement-learning demonstrations for Computex.</li>
                     </ul>
                 </div>
             </div>
+        </section>
 
+        <section>
+            <h2>Selected Silicon Programs</h2>
+            <div class="portfolio-matrix">
+                <div class="portfolio-card"><strong>MT6986 / MT6988 / MT2739 Modem SoCs:</strong> 1408KB AXI3 SRAM controller architecture boundary, low-power memory policy, thermal-controller integration, full-SoC emulation de-risking, silicon bring-up, and production ramp.</div>
+                <div class="portfolio-card"><strong>MT6980 / MT6990 / MT2737 Modem SoCs:</strong> 512KB AXI3 SRAM controller ownership, integration closure criteria, and full-SoC FPGA emulation risk coverage.</div>
+                <div class="portfolio-card"><strong>MT3775 112G Retimer:</strong> Rambus MACsec integration with sign-off readiness across large-block synthesis, DFT insertion, clock constraints, APR handoff, and 1.308GHz timing closure.</div>
+                <div class="portfolio-card"><strong>MT66007 PCIe Gen5 Test Chip:</strong> Synopsys PCIe Gen5 MAC integration contract, Lint/CDC/MBIST cleanup, VIP setup, PHY/MAC verification criteria, and 1GHz timing closure.</div>
+                <div class="portfolio-card"><strong>TPU v7:</strong> Production test readiness, test-flow/program definition, yield/DPPM tracking, and MP flow/program release from a design-for-productization perspective.</div>
+                <div class="portfolio-card"><strong>Wiwynn Server Platforms:</strong> CPLD/FPGA power/debug control, OCP debug-card architecture, and Intel Altera FPGA AI server demos.</div>
+            </div>
         </section>
 
         <section>
             <h2>Technical Skills</h2>
-            <ul class="skills-list">
-                <li><strong>Design & Verification:</strong> Verilog, SystemVerilog, Control IP Design, FPGA Prototyping.</li>
-                <li><strong>Domain Knowledge:</strong> PCIe Gen5, AMBA (AXI/APB), CDC/RDC, Synthesis, STA.</li>
-                <li><strong>Tools & Flows:</strong> Synopsys (VCS, Verdi, DC, SpyGlass), Cadence (Genus, Innovus, LEC), Xilinx Vivado.</li>
-                <li><strong>Scripting & Languages:</strong> Python, Tcl, Shell Scripting, C/C++.</li>
-            </ul>
+            <div class="skills-table">
+                <div class="skills-category">Languages</div>
+                <div>Verilog, SystemVerilog, Python, Tcl, Shell, C/C++</div>
+                <div class="skills-category">Design Domains</div>
+                <div>Architecture boundary definition, architecture review support, RTL design, SRAM controller implementation, low-power memory control, SoC/IP integration, thermal controller integration</div>
+                <div class="skills-category">Front-End Flow</div>
+                <div>Lint, CDC/RDC, local VIP setup, PHY/MAC co-verification, synthesis, LEC, DFT/MBIST insertion, clock and timing constraints</div>
+                <div class="skills-category">Implementation</div>
+                <div>Physical-aware RTL, synthesis handoff, APR collaboration, timing-closure debug, closure criteria review, sign-off readiness support, clock-tree constraint development</div>
+                <div class="skills-category">Emulation / FPGA</div>
+                <div>Palladium, Synopsys HAPS, multi-FPGA partitioning awareness, Xilinx FPGA prototyping, Lattice CPLD, Intel Altera FPGA tools</div>
+                <div class="skills-category">Protocols / IP</div>
+                <div>AXI3 / AMBA, PCIe Gen5, MACsec, I2C, SPI, JTAG, UART, GPIO</div>
+                <div class="skills-category">Tools</div>
+                <div>Synopsys VCS / Verdi / Design Compiler / SpyGlass / PrimeTime, Cadence Genus / Innovus / LEC, Xilinx Vivado / Siemens 0in</div>
+            </div>
         </section>
 
         <section>
             <h2>Education</h2>
-            <div class="section-content">
-                <div class="education-entry">
-                    <div class="education-header">
-                        <span>National Taiwan Normal University (NTNU)</span>
-                        <span class="location">2013 – 2015</span>
-                    </div>
-                    <div class="education-degree">Master of Science, M.S. in Computer Science and Information Engineering (CSIE)</div>
-                    
-                    <div class="education-header" style="margin-top: 10px;">
-                        <span>National Taipei University of Education (NTUE)</span>
-                        <span class="location">2009 – 2013</span>
-                    </div>
-                    <div class="education-degree">Bachelor of Science, B.S. in Computer Science (CS)</div>
-                </div>
+            <div class="edu-header">
+                <span><strong>National Taiwan Normal University (NTNU)</strong></span>
+                <span class="meta-text">2013 – 2015</span>
             </div>
+            <div class="edu-spec">M.S., Computer Science and Information Engineering</div>
+            <div class="edu-header">
+                <span><strong>National Taipei University of Education (NTUE)</strong></span>
+                <span class="meta-text">2009 – 2013</span>
+            </div>
+            <div class="edu-spec">B.S., Computer Science</div>
         </section>
-
-    </div>
-
+    </main>
 </body>
 </html>
